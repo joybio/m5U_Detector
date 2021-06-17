@@ -1,0 +1,83 @@
+---
+################################################################################
+# directories
+################################################################################
+# directory, where is/are the input fastq.gz file(s) located
+input_dir: /home/l/backup3/ZW/20190515/eclip/
+
+# directory, in which the pipeline writes all output files (relative to current directory)
+# (this also includes the summary files)
+results_dir: /home/l/backup3/ZW/20190515/eclip/test
+
+# directory to write the log-files, created during processing, to 
+log_dir: /home/l/backup3/ZW/20190515/eclip//test/log
+
+################################################################################
+# sample(s) information
+################################################################################
+# name(s) of the input fastq file(s)
+# if the sample is named: sample1_combined.R1.fastq.gz:
+# please type here: sample1
+# this name is used throughout the entire pipeline as name for the output samples
+samples:
+  - S-sfGFP-1
+  - S-sfGFP-2
+  - S-TRMT2A-1
+  - S-TRMT2A-2
+
+gtf_file: /home/l/backup1/refgenome/homo_sapiens/Homo_sapiens.GRCh38.101.gtf
+fa_file: /home/l/backup1/refgenome/homo_sapiens/Homo_sapiens.GRCh38.dna.toplevel.fa
+#!make sure that you have write file:group.csv 
+################################################################################
+# read_preprocessing
+################################################################################
+
+#-------------------------------------------------------------------------------
+# adapter trimming
+#-------------------------------------------------------------------------------
+# adaptor_information: /home/l/backup4/ZW/2020.11.Nm/201111-Nova/QC_summary.xls
+
+# the minimum read length, each read must have after adapter trimming (5' and 3')
+# (shorter reads are discarded)
+min_length: 11
+
+#Maximum allowed error rate as value between 0 and 1 (no. of errors divided by length of matching region).Default: 0.1 (=10%)
+error_rate: 0.1 
+
+#Require MINLENGTH overlap between read and adapter for an adapter to be found. Default: 3
+overlap: 5
+
+################################################################################
+# mapping hg38 inference
+################################################################################
+
+#-------------------------------------------------------------------------------
+# hisat2 mapping
+#-------------------------------------------------------------------------------
+# the directory in which the HISAT2 genome index will be stored
+# the first run of the pipeline will generate the index automatically
+# and will store it at the provided directory
+hisat2_idx: /home/l/backup1/refgenome/homo_sapiens/hisat2/GRCh38
+
+# HISAT2 is much faster when it is run in parallel mode
+# set here the number of available cores HISAT2 is allowed to run on
+#threads.HISAT2: 16
+ 
+#strandness library:
+#3'ligation: FR; F
+#dUTP: RF; R
+strandness: F
+
+#-------------------------------------------------------------------------------
+# mature-tRNAs database
+#-------------------------------------------------------------------------------
+
+tRNA_database: /home/l/backup1/refgenome/homo_sapiens/tRNA_database/hg38
+# download: http://gtrnadb.ucsc.edu/genomes/eukaryota/Hsapi38/hg38-mature-tRNAs.fa
+
+
+
+
+
+
+
