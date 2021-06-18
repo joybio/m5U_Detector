@@ -187,7 +187,7 @@ rule depth_tRNA:
 		config["results_dir"] + "/tRNA.merge.depth.bed"
 	shell:
 		"""
-		intersectBed -a {input[0]} -b {input[1]} -wo > {output[0]}
+		intersectBed -a {input[1]} -b {input[0]} -wo > {output[0]}
 		"""
 #-------------------------------------------------------------------------------
 # prepare_tRNA_sequence rule11: Dependency packages - None
