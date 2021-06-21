@@ -270,7 +270,7 @@ rule passthrough:
 		config["results_dir"] + "/passthrough.xls"
 	shell:
 		"""
-		python ./scripts/pass_through.py -i input -o output
+		python ./scripts/pass_through.py -i {input} -o {output}
 		"""
 
 
