@@ -46,7 +46,7 @@ Before starting the pipeline, open the `m5Useq_config.yaml` configuration file a
 # Start a run
 
 Once you set up your configuration file, running the pipeline locally on your computer is as easy as invoking:
-`sh step.sh`
+`sh run.sh`
 
 
 
