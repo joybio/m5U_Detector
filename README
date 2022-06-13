@@ -17,7 +17,7 @@ hg38.tRNA: http://gtrnadb.ucsc.edu/genomes/eukaryota/Hsapi38/hg38-mature-tRNAs.f
 # snakemake
 Snakemake is a workflow management system that helps to create and execute data processing pipelines. It requires python3 and can be most easily installed via the bioconda package of the python anaconda distribution.
 
-conda create -n m5Useq-snakemake -c bioconda -c conda-forge --file requirements.txt python=3
+conda create -n m5Useq-snakemake -c bioconda -c conda-forge --file requrement.txt python=3
 
 # Activate the environment
   ```bash
