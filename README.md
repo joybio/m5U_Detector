@@ -40,7 +40,7 @@ Before starting the pipeline, open the `m5Useq_config.yaml` configuration file a
   - **name of the output directory** - where should the pipeline store the output files (the direcotry is created if not existing)
   - **name of the log directory** - where should the pipeline store the log files
   - **name(s) of your input samples** - please note: If your sample is named `sample1.fq.gz` then `sample1` will be kept as naming scheme throughout the entire run to indicate output files that belong to this input file, e.g. the pipeline will create a file called `sample1.3pSites.noIP.bed.gz`. If you have multiple input files, just follow the given pattern with one sample name per line (and a dash that indicates another list item).
-# - **groups of your input samples**, must contain "type","control","treat", makesure "-" in your sample name replaced with "."
+  - **groups of your input samples**, must contain "type","control","treat", makesure "-" in your sample name replaced with "."
 
 
 # Start a run
